@@ -9,3 +9,7 @@
 * {
     box-sizing: border-box;
 }
+
+html,body{
+    @apply dark:bg-[#232323]
+}
