@@ -9,7 +9,7 @@ const ChatBot = () => {
     const [messages, setMessages] = useState([]);
     return (
         <div className='absolute right-5 left-5 bottom-2'>
-            <h1 className=' max-w-max text-xl mx-auto text-primary font-bold'>chat bot</h1>
+            <h1 className='max-w-max text-xl mx-auto text-primary font-bold'>chat bot</h1>
 
             <button className='bg-white w-full p-1 rounded-3xl flex items-center justify-around' onClick={toggle}>
                 <img className=' ' src={logoChatBot} />

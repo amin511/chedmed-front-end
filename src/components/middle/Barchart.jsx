@@ -1,5 +1,6 @@
 import { BarChart } from "@mui/x-charts/BarChart";
 import { axisClasses } from "@mui/x-charts";
+import { randomId } from "@mantine/hooks";
 
 const Barchart = () => {
     const chartSetting = {
@@ -19,51 +20,51 @@ const Barchart = () => {
     };
     const dataset = [
         {
-            retour: 59,
+            sold: Math.random() * 100,
             wilaya: "alger",
         },
         {
-            retour: 50,
+            sold: Math.random() * 100,
             wilaya: "oran",
         },
         {
-            retour: 47,
+            sold: Math.random() * 100,
             wilaya: "khenchla",
         },
         {
-            retour: 54,
+            sold: Math.random() * 100,
             wilaya: "tbssa",
         },
         {
-            retour: 57,
+            sold: Math.random() * 100,
             wilaya: "batna",
         },
         {
-            retour: 60,
+            sold: 35,
             wilaya: "djijel",
         },
         {
-            retour: 59,
+            sold: 40,
             wilaya: "bejaia",
         },
         {
-            retour: 65,
+            sold: 45,
             wilaya: "tiziouzou",
         },
         {
-            retour: 51,
+            sold: 10,
             wilaya: "djelfa",
         },
         {
-            retour: 60,
+            sold: 20,
             wilaya: "adrar",
         },
         {
-            retour: 67,
+            sold: 10,
             wilaya: "temnrasset",
         },
         {
-            retour: 61,
+            sold: 20,
             wilaya: "bechar",
         },
     ];
@@ -74,9 +75,9 @@ const Barchart = () => {
             <BarChart
                 dataset={dataset}
                 xAxis={[{ scaleType: "band", dataKey: "wilaya" }]}
-                series={[{ dataKey: "retour", label: "retour", valueFormatter }]}
+                series={[{ dataKey: "sold", label: "sold", valueFormatter }]}
                 {...chartSetting}
-                colors={["#5E5CE6"]}
+                colors={["#D10024"]}
             />
         </>
     );

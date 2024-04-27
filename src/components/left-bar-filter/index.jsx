@@ -16,10 +16,7 @@ const Leftsidebar = () => {
             id: 1,
             img: localisation,
         },
-        {
-            id: 2,
-            img: hand,
-        },
+
         {
             id: 3,
             img: calender,
@@ -34,7 +31,6 @@ const Leftsidebar = () => {
             {navlist.map((item) => {
                 return (
                     <>
-
                         <button
                             onClick={() => {
 

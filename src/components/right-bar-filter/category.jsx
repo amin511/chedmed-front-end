@@ -3,6 +3,7 @@ import downIcon from '../../assets/down.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProducts } from '../../redux/features/products/productsSlice';
 import data from '../../../../data';
+import { Link } from 'react-router-dom';
 
 const Category = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,19 +28,21 @@ const Category = (props) => {
                 <ul className='mt-3 '>
                     {products.map((product) => {
                         return product.category === props.category ?
-                            <li
+                            <Link to={`/${product.title}`}> <li
                                 key={product.id}
                                 className='cursor-pointer text-sm p-2  rounded-md transition transform hover:scale-105 hover:bg-gray-200'
                             >
                                 {product.title}
                             </li>
+                            </Link>
                             :
                             ""
                     }
                     )}
                 </ul>
-            )}
-        </li>
+            )
+            }
+        </li >
     );
 };
 

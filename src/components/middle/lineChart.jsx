@@ -3,15 +3,15 @@ import { LineChart } from "@mui/x-charts/LineChart";
 export default function BasicLineChart() {
     return (
         <LineChart
-            xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
+            xAxis={[{ data: [10, 15, 17, 18, 20, 25, 30, 35, 40, 45] }]}
             series={[
                 {
-                    data: [2, 5.5, 2, 8.5, 1.5, 5],
+                    data: [2, 35, 55, 70, 80, 75, 60, 40, 30, 20],
                 },
             ]}
             width={500}
             height={300}
-            colors={["#5E5CE6"]}
+            colors={["#D10024"]}
         />
     );
 }

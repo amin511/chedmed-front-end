@@ -4,6 +4,13 @@ import Navbar from "./components/navbar/index"
 import { MantineProvider } from '@mantine/core';
 import { useState, useEffect } from "react";
 import ToogleDarkMode from "./components/navbar/ToogledarkMode";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
@@ -20,14 +27,33 @@ function App() {
   }, [theme]);
 
   return (
-    <div className="dark:bg-[#232323]">
-      <MantineProvider >
-        <Navbar />
-        <Home />
-        <ToogleDarkMode theme={theme} setTheme={setTheme} />
 
-      </MantineProvider>
-    </div>
+
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <div className="dark:bg-[#232323]">
+            <MantineProvider >
+              <Navbar />
+              <Home />
+              {/* <ToogleDarkMode theme={theme} setTheme={setTheme} /> */}
+            </MantineProvider>
+          </div>}
+
+        />
+        <Route path="/:title" element={
+
+          <div className="dark:bg-[#232323]">
+            <MantineProvider >
+              <Navbar />
+              <Home />
+              {/* <ToogleDarkMode theme={theme} setTheme={setTheme} /> */}
+            </MantineProvider>
+          </div>
+        } />
+
+      </Routes>
+    </Router>
   );
 }
 
